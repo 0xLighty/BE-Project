@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F297FB25-1E82-4082-BE2F-F4D0FBE9C08A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Project_OnlineQuiz</RootNamespace>
+    <AssemblyName>Project_OnlineQuiz</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>
+    </IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>
+    </IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>
+    </IISExpressUseClassicPipelineMode>
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.2.1.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Admin\Files\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\addquestion.aspx" />
+    <Content Include="Admin\AEditPro.aspx" />
+    <Content Include="Admin\DbCheck.aspx" />
+    <Content Include="Admin\detailsexamquestion.aspx" />
+    <Content Include="Admin\exam.aspx" />
+    <Content Include="Admin\examquestion.aspx" />
+    <Content Include="Admin\FileUploadtemp.aspx" />
+    <Content Include="Admin\forgotf.aspx" />
+    <Content Include="Admin\imageTemp.aspx" />
+    <Content Include="Admin\Index.aspx" />
+    <Content Include="Admin\login.aspx" />
+    <Content Include="Admin\question.aspx" />
+    <Content Include="Admin\result.aspx" />
+    <Content Include="Admin\studentlist.aspx" />
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="categoryitem.aspx" />
+    <Content Include="forgotPassword.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="index2.aspx" />
+    <Content Include="myresult.aspx" />
+    <Content Include="question.aspx" />
+    <Content Include="RealAdmin\AdLogin.aspx" />
+    <Content Include="RealAdmin\forgot.aspx" />
+    <Content Include="RealAdmin\RIndex.aspx" />
+    <Content Include="RealAdmin\Scripts\jquery-ui.css" />
+    <Content Include="RealAdmin\Scripts\jquery-ui.js" />
+    <Content Include="RealAdmin\Scripts\jquery-ui.min.css" />
+    <Content Include="RealAdmin\Scripts\jquery-ui.min.js" />
+    <Content Include="RealAdmin\Scripts\jquery-ui.structure.css" />
+    <Content Include="RealAdmin\Scripts\jquery-ui.structure.min.css" />
+    <Content Include="RealAdmin\Scripts\jquery-ui.theme.css" />
+    <Content Include="RealAdmin\Scripts\jquery-ui.theme.min.css" />
+    <Content Include="RealAdmin\Scripts\jquery.js" />
+    <Content Include="RealAdmin\Scripts\LICENSE.txt" />
+    <Content Include="RealAdmin\temp.aspx" />
+    <Content Include="RealAdmin\Workspace.aspx" />
+    <Content Include="register.aspx" />
+    <Content Include="SEditPro.aspx" />
+    <Content Include="subjectexam.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Login.aspx" />
+    <Content Include="WebForm2.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\addquestion.aspx.cs">
+      <DependentUpon>addquestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\addquestion.aspx.designer.cs">
+      <DependentUpon>addquestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AEditPro.aspx.cs">
+      <DependentUpon>AEditPro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AEditPro.aspx.designer.cs">
+      <DependentUpon>AEditPro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DbCheck.aspx.cs">
+      <DependentUpon>DbCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DbCheck.aspx.designer.cs">
+      <DependentUpon>DbCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DBHelperr.cs" />
+    <Compile Include="Admin\detailsexamquestion.aspx.cs">
+      <DependentUpon>detailsexamquestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\detailsexamquestion.aspx.designer.cs">
+      <DependentUpon>detailsexamquestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\exam.aspx.cs">
+      <DependentUpon>exam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\exam.aspx.designer.cs">
+      <DependentUpon>exam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\examquestion.aspx.cs">
+      <DependentUpon>examquestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\examquestion.aspx.designer.cs">
+      <DependentUpon>examquestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FileUploadtemp.aspx.cs">
+      <DependentUpon>FileUploadtemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FileUploadtemp.aspx.designer.cs">
+      <DependentUpon>FileUploadtemp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\forgotf.aspx.cs">
+      <DependentUpon>forgotf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\forgotf.aspx.designer.cs">
+      <DependentUpon>forgotf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Handler1.ashx.cs">
+      <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Handler2.ashx.cs">
+      <DependentUpon>Handler2.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\imageTemp.aspx.cs">
+      <DependentUpon>imageTemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\imageTemp.aspx.designer.cs">
+      <DependentUpon>imageTemp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\question.aspx.cs">
+      <DependentUpon>question.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\question.aspx.designer.cs">
+      <DependentUpon>question.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\result.aspx.cs">
+      <DependentUpon>result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\result.aspx.designer.cs">
+      <DependentUpon>result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\studentlist.aspx.cs">
+      <DependentUpon>studentlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\studentlist.aspx.designer.cs">
+      <DependentUpon>studentlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="categoryitem.aspx.cs">
+      <DependentUpon>categoryitem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="categoryitem.aspx.designer.cs">
+      <DependentUpon>categoryitem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="forgotPassword.aspx.cs">
+      <DependentUpon>forgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgotPassword.aspx.designer.cs">
+      <DependentUpon>forgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index2.aspx.cs">
+      <DependentUpon>index2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index2.aspx.designer.cs">
+      <DependentUpon>index2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myresult.aspx.cs">
+      <DependentUpon>myresult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myresult.aspx.designer.cs">
+      <DependentUpon>myresult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="question.aspx.cs">
+      <DependentUpon>question.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="question.aspx.designer.cs">
+      <DependentUpon>question.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RealAdmin\AdLogin.aspx.cs">
+      <DependentUpon>AdLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RealAdmin\AdLogin.aspx.designer.cs">
+      <DependentUpon>AdLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RealAdmin\forgot.aspx.cs">
+      <DependentUpon>forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RealAdmin\forgot.aspx.designer.cs">
+      <DependentUpon>forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RealAdmin\RAdmin.Master.cs">
+      <DependentUpon>RAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RealAdmin\RAdmin.Master.designer.cs">
+      <DependentUpon>RAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="RealAdmin\RIndex.aspx.cs">
+      <DependentUpon>RIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RealAdmin\RIndex.aspx.designer.cs">
+      <DependentUpon>RIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RealAdmin\temp.aspx.cs">
+      <DependentUpon>temp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RealAdmin\temp.aspx.designer.cs">
+      <DependentUpon>temp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RealAdmin\Workspace.aspx.cs">
+      <DependentUpon>Workspace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RealAdmin\Workspace.aspx.designer.cs">
+      <DependentUpon>Workspace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SEditPro.aspx.cs">
+      <DependentUpon>SEditPro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SEditPro.aspx.designer.cs">
+      <DependentUpon>SEditPro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="subjectexam.aspx.cs">
+      <DependentUpon>subjectexam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="subjectexam.aspx.designer.cs">
+      <DependentUpon>subjectexam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usermaster.Master.cs">
+      <DependentUpon>usermaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usermaster.Master.designer.cs">
+      <DependentUpon>usermaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="Admin\Handler1.ashx" />
+    <Content Include="Admin\Handler2.ashx" />
+    <None Include="packages.config" />
+    <Content Include="Site1.Master" />
+    <Content Include="usermaster.Master" />
+    <Content Include="RealAdmin\RAdmin.Master" />
+    <Content Include="RealAdmin\Scripts\package.json" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51234</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51234/OnlineQuiz/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
